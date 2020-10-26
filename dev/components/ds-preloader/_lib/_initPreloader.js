@@ -1,15 +1,17 @@
 import config from "./_config";
 import classAdd from "./_classAdd";
+import classRemove from "./_classRemove";
 
 export default function initPreloader() {
   const preloader = document.createElement("div");
   preloader.classList.add("ds-preloader");
   document.body.prepend(preloader);
+  classAdd(config.preloaderContainer, "ds-preloader-show", 50);
 
-  // classAdd(config.body, "ds-preloader-body", 0);
-
-  // window.onload = function() {
-  //   classAdd(config.preloaderContainer, "ds-preloader-loaded", 500);
-  //   classAdd(config.preloaderContainer, "ds-preloader-dnone", 1000);
-  // };
+  window.onload = function() {
+    classRemove(config.preloaderContainer, "ds-preloader-show", 1500);
+    setTimeout(() => {
+      preloader.remove();
+    }, 2000);
+  };
 }
