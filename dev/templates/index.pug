@@ -7,20 +7,6 @@ html(lang="ru-RU")
         title #{title}
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        style(type='text/css').
-          body {
-           overflow: hidden;
-          }
-          body:after {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: #ffffff;
-            z-index: 99998;
-          }
-    body
+    body.ds-preloader-body
         block content
      
