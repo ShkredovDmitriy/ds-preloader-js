@@ -6,7 +6,9 @@ export default function initPreloader() {
   const preloader = document.createElement("div");
   preloader.classList.add("ds-preloader");
   document.body.prepend(preloader);
-  preloaderOpen();
+  setTimeout(() => {
+    preloaderOpen();
+  }, 50);
 
   window.onload = function() {
     preloaderClose();
