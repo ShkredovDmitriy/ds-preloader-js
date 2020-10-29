@@ -58,9 +58,6 @@ const commonDev = merge([
       filename: "./js/[name].js?[hash]"
     },
     plugins: [
-      new webpack.ProvidePlugin({
-        Promise: "es6-promise-promise"
-      }),
       new Dotenv(),
       new WriteFilePlugin(),
       new CopyPlugin(filesLocations)
@@ -91,9 +88,6 @@ const commonProd = merge([
       filename: "./js/[name].js?[hash]"
     },
     plugins: [
-      new webpack.ProvidePlugin({
-        Promise: "es6-promise-promise"
-      }),
       new Dotenv(),
       new WriteFilePlugin(),
       new CopyPlugin(filesLocations)
