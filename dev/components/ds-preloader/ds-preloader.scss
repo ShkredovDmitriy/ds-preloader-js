@@ -13,17 +13,19 @@
   }
 }
 
+.ds-preloader-no-scroll {
+  overflow: hidden;
+}
+
 .ds-preloader {
   position: fixed;
-  top: 50%;
-  left: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #383e9f;
   z-index: 99999;
   overflow: hidden;
-  transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .ds-preloader-counter {
@@ -59,14 +61,20 @@
 
 @keyframes dsPrOpen {
   0% {
+    top: 50%;
+    left: 50%;
     width: 0;
     height: 0.25rem;
   }
   50% {
+    top: 50%;
+    left: 0;
     width: 100%;
     height: 0.25rem;
   }
   100% {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
@@ -74,10 +82,14 @@
 
 @keyframes dsPrClose {
   0% {
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
   }
   100% {
+    top: 50%;
+    left: 0;
     width: 100%;
     height: 0;
   }

@@ -2,9 +2,7 @@
 import "./ds-preloader.scss";
 import configSet from "./_lib/_configSet";
 import configGet from "./_lib/_configGet";
-import preloaderCreate from "./_lib/_preloaderCreate";
-import preloaderOpen from "./_lib/_preloaderOpen";
-import preloaderCounter from "./_lib/_preloaderCounter";
+import preloaderInit from "./_lib/_preloaderInit";
 
 class DsPreloaderComponent {
   constructor() {
@@ -16,9 +14,7 @@ class DsPreloaderComponent {
   }
 
   init() {
-    preloaderCreate();
-    preloaderOpen();
-    preloaderCounter();
+    preloaderInit();
   }
 
   status() {

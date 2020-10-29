@@ -1,9 +1,14 @@
 import config from "./_config";
+import { message } from "./_log";
 
 export default function preloaderRemove() {
-  setTimeout(() => {
-    if (document.querySelector(config.preloaderContainer)) {
-      document.querySelector(config.preloaderContainer).remove();
-    }
-  }, 2500);
+  return new Promise(resolve => {
+    setTimeout(() => {
+      if (document.querySelector(config.preloaderContainer)) {
+        document.querySelector(config.preloaderContainer).remove();
+        message("ds-preloader: remove", config.logs);
+        resolve();
+      }
+    }, 1500);
+  });
 }
