@@ -1,8 +1,10 @@
 /* eslint-disable class-methods-use-this */
 import "./ds-preloader.scss";
-import initPreloader from "./_lib/_initPreloader";
 import configSet from "./_lib/_configSet";
 import configGet from "./_lib/_configGet";
+import preloaderCreate from "./_lib/_preloaderCreate";
+import preloaderOpen from "./_lib/_preloaderOpen";
+import preloaderCounter from "./_lib/_preloaderCounter";
 
 class DsPreloaderComponent {
   constructor() {
@@ -14,7 +16,9 @@ class DsPreloaderComponent {
   }
 
   init() {
-    initPreloader();
+    preloaderCreate();
+    preloaderOpen();
+    preloaderCounter();
   }
 
   status() {
