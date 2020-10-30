@@ -2,7 +2,7 @@
 import "./ds-preloader.scss";
 import create from "./_lib/_create";
 import open from "./_lib/_open";
-import counter from "./_lib/_counter";
+import load from "./_lib/_load";
 
 class DsPreloaderComponent {
   constructor() {
@@ -12,7 +12,7 @@ class DsPreloaderComponent {
   init() {
     create();
     open();
-    counter(1500);
+    load(1500);
   }
 }
 
