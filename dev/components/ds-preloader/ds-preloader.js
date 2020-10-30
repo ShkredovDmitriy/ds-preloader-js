@@ -1,24 +1,18 @@
 /* eslint-disable class-methods-use-this */
 import "./ds-preloader.scss";
-import configSet from "./_lib/_configSet";
-import configGet from "./_lib/_configGet";
-import preloaderInit from "./_lib/_preloaderInit";
+import create from "./_lib/_create";
+import open from "./_lib/_open";
+import counter from "./_lib/_counter";
 
 class DsPreloaderComponent {
   constructor() {
     this.makeWithLove = true;
   }
 
-  config(data) {
-    configSet(data);
-  }
-
   init() {
-    preloaderInit();
-  }
-
-  status() {
-    configGet();
+    create();
+    open();
+    counter(1500);
   }
 }
 
