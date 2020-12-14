@@ -185,7 +185,6 @@ module.exports = env => {
     exportHTMLfiles,
     copyStaticFiles,
     exportCssToMainMinCss,
-    resolveTypescript,
-    copyFilesToPackage
+    resolveTypescript
   ]);
 };
