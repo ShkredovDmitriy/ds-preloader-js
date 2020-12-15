@@ -1,4 +1,5 @@
 ## ds-preloader-js
+<img src="https://badgen.net/npm/v/ds-preloader-js"/><img src="https://badgen.net/npm/dw/ds-preloader-js"/></br>
 
 ### Demo
 https://shkredovdmitriy.github.io/ds-preloader-js/
