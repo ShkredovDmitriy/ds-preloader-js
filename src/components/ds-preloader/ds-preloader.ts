@@ -2,7 +2,6 @@ import "./ds-preloader.scss";
 import preloaderComponentCreate from "./_lib/_preloaderComponentCreate";
 import preloaderComponentOpen from "./_lib/_preloaderComponentOpen";
 import preloaderComponentLoad from "./_lib/_preloaderComponentLoad";
-import preloaderComponentClose from "./_lib/_preloaderComponentClose";
 
 class DsPreloader {
 
