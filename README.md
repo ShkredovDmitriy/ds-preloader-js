@@ -13,10 +13,10 @@ https://shkredovdmitriy.github.io/ds-preloader-js/
 
 Add this lines to head
 ```
-<link href="https://unpkg.com/ds-preloader-js@0.1.0/dist/ds-preloader.min.css" rel="stylesheet">
+<link href="https://unpkg.com/ds-preloader-js@0.1.11/dist/ds-preloader.min.css" rel="stylesheet">
 ```
 ```
-<script src="https://unpkg.com/ds-preloader-js@0.1.0/dist/ds-preloader.min.js"></script>
+<script src="https://unpkg.com/ds-preloader-js@0.1.11/dist/ds-preloader.min.js"></script>
 ```
 Add this class to body
 ```
