@@ -50,11 +50,10 @@
   width: 100%;
   height: 100%;
   animation: dsPrlClose 800ms ease-in-out 1;
-  animation-delay: 400ms;
   animation-fill-mode: forwards;
 
   .ds-prl-load {
-    animation: dsPrlCtHide 400ms ease-in-out 1;
+    animation: dsPrlCtHide 800ms ease-in-out 1;
     animation-fill-mode: forwards;
   }
 }

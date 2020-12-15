@@ -6,8 +6,6 @@ const config = {
   body: "body",
   bodyNoShow: "ds-prl-body",
   bodyNoScroll: "ds-prl-no-scroll",
-  // 
-  counterHtmlElement: "",
   counter: 0,
   progressPerImage: 0,
 };

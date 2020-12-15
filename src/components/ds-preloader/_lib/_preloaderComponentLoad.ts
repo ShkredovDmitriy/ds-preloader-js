@@ -1,27 +1,31 @@
 import config from "./_config";
 import singleSelector from "./_preloaderShortSelectors";
-import close from "./_close";
+import preloaderComponentClose from "./_preloaderComponentClose";
+
+let counterHtmlElement:HTMLElement;
 
 async function selectCounterHtmlElement(){
-  config.counterHtmlElement = singleSelector(config.load);
+  counterHtmlElement = singleSelector(config.load);
 }
 
-function updateCounter() {
+async function updateCounter() {
   config.counter += config.progressPerImage;
   console.log(config.counter);
   if(config.counter > 100) {
     config.counter = 100;
-    close();
   }
-  config.counterHtmlElement.innerHTML = `${config.counter}%`;
+  counterHtmlElement.innerHTML = `${config.counter}%`;
+  if(config.counter >= 100) {
+    await preloaderComponentClose();
+  }
 }
 
 function listenLoadEvent(url:string) {
-  var tester = new Image();
+  var virtualImage = new Image();
   console.log("create new image");
-  tester.addEventListener("load", updateCounter);
-  tester.addEventListener("error", updateCounter);
-  tester.src = url;
+  virtualImage.addEventListener("load", updateCounter);
+  virtualImage.addEventListener("error", updateCounter);
+  virtualImage.src = url;
 }
 
 async function listenLoadAllImages(){

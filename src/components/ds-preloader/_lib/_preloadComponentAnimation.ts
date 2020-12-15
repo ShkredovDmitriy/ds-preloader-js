@@ -5,7 +5,7 @@ export default function addAnimationToModal(componentSelector:string, animationC
   return new Promise((resolve) => {
     component.classList.add(animationClass);
     const onCssAnimationEnd = () => {
-      component.classList.remove(animationClass);
+      // component.classList.remove(animationClass);
       resolve(true);
       component.removeEventListener(
         "animationend",
