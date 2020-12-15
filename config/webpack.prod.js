@@ -153,11 +153,11 @@ const copyFilesToPackage = merge([
         patterns: [
           {
             from: 'docs/css/',
-            to: '../pack/dist/ds-modal.min.css',
+            to: '../pack/dist/ds-preloader.min.css',
           },
           {
             from: 'docs/js/',
-            to: '../pack/dist/ds-modal.min.js',
+            to: '../pack/dist/ds-preloader.min.js',
           },
           {
             from: 'package-pack.json',
@@ -179,12 +179,13 @@ const copyFilesToPackage = merge([
 
 module.exports = env => {
   return merge([
-    productionPoints, 
+    productionPoints,
     clearBuildFolder(),
     typescriptLoader(),
     exportHTMLfiles,
     copyStaticFiles,
     exportCssToMainMinCss,
-    resolveTypescript
+    resolveTypescript,
+    copyFilesToPackage
   ]);
 };

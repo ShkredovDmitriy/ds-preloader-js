@@ -10,7 +10,6 @@ async function selectCounterHtmlElement(){
 
 async function updateCounter() {
   config.counter += config.progressPerImage;
-  console.log(config.counter);
   if(config.counter > 100) {
     config.counter = 100;
   }
@@ -22,7 +21,6 @@ async function updateCounter() {
 
 function listenLoadEvent(url:string) {
   var virtualImage = new Image();
-  console.log("create new image");
   virtualImage.addEventListener("load", updateCounter);
   virtualImage.addEventListener("error", updateCounter);
   virtualImage.src = url;
@@ -33,7 +31,10 @@ async function listenLoadAllImages(){
   if (imagesOnPage.length > 0) {
     config.progressPerImage = Math.floor(100 / imagesOnPage.length) + 1;
     imagesOnPage.forEach(img => listenLoadEvent(img.src));
-  } 
+  } else {
+    config.counter = 101;
+    updateCounter();
+  }
 }
 
 export default async function preloaderComponentLoad() {

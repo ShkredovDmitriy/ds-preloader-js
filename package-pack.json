@@ -1,24 +1,23 @@
 {
-  "name": "ds-modal-js",
-  "version": "0.2.30",
-  "description": "ds-modal-js - lightweight and easy to use javascript modal dialog",
+  "name": "ds-preloader-js",
+  "version": "0.1.0",
+  "description": "ds-preloader-js - lightweight and easy to use javascript preloader",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ShkredovDmitriy/ds-modal-js.git"
+    "url": "git+https://github.com/ShkredovDmitriy/ds-preloader-js.git"
   },
   "keywords": [
-    "modal",
-    "dialog",
+    "preloader",
     "no jQuery"
   ],
   "author": {
     "name": "Dmitriy Shkredov",
     "email": "ShkredovDmitriy@gmail.com",
-    "url": "https://github.com/ShkredovDmitriy/ds-modal-js"
+    "url": "https://github.com/ShkredovDmitriy/ds-preloader-js"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ShkredovDmitriy/ds-modal-js/issues"
+    "url": "https://github.com/ShkredovDmitriy/ds-preloader-js/issues"
   },
-  "homepage": "https://github.com/ShkredovDmitriy/ds-modal-js#readme"
+  "homepage": "https://github.com/ShkredovDmitriy/ds-preloader-js#readme"
 }
