@@ -11,11 +11,10 @@ https://shkredovdmitriy.github.io/ds-preloader-js/
 
 ### Without installation
 
-Add this line to head
+Add this lines to head
 ```
 <link href="https://unpkg.com/ds-modal-js@0.1.0/dist/ds-preloader.min.css" rel="stylesheet">
 ```
-Add this line to the top of the body
 ```
 <script src="https://unpkg.com/ds-modal-js@0.1.0/dist/ds-preloader.min.js"></script>
 ```
