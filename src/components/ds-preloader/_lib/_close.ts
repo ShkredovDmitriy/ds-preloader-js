@@ -1,8 +1,13 @@
 import config from "./_config";
+import singleSelector from "./_preloaderShortSelectors";
+import modalComponentAnimation from "./_preloadComponentAnimation";
 
-export default function preloaderClose() {
-  // classAddRem(config.body, config.bodyNoScroll, 0, true);
-  // classAddRem(config.body, config.bodyNoShow, 0, false);
-  // classAddRem(config.prl, config.prlClose, 50, true);
-  // classAddRem(config.body, config.bodyNoScroll, 1000, false);
+async function removeClassToPreloader() {
+  singleSelector(config.prl).classList.add(config.prlClose);
+  singleSelector('body').classList.remove(config.bodyNoShow);
+}
+
+export default async function preloaderClose() {
+  await modalComponentAnimation(config.prl, config.prlClose);
+  await removeClassToPreloader();
 }

@@ -1,14 +1,14 @@
 import "./ds-preloader.scss";
-import create from "./_lib/_create";
-import open from "./_lib/_open";
-import load from "./_lib/_load";
+import preloaderComponentCreate from "./_lib/_preloaderComponentCreate";
+import preloaderComponentOpen from "./_lib/_preloaderComponentOpen";
+import preloaderComponentLoad from "./_lib/_preloaderComponentLoad";
 
 class DsPreloader {
 
-  init() {
-    create();
-    open();
-    load();
+  async init() {
+    await preloaderComponentCreate();
+    await preloaderComponentOpen();
+    await preloaderComponentLoad();
   }
 }
 
