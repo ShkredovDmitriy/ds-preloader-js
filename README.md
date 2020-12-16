@@ -23,6 +23,24 @@ Add this class to body
 ```
 <body class="ds-prl-body">
 ```
+### Simple working example
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=">
+  <link href="https://unpkg.com/ds-preloader-js@0.1.11/dist/ds-preloader.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/ds-preloader-js@0.1.11/dist/ds-preloader.min.js"></script>
+</head>
+<body class="ds-prl-body">
+  <img src="https://shkredovdmitriy.github.io/ds-preloader-js/images/image-demo-1.jpg" class="ds-preloader-demo-image">
+  <img src="https://shkredovdmitriy.github.io/ds-preloader-js/images/image-demo-2.jpg" class="ds-preloader-demo-image">
+  <img src="https://shkredovdmitriy.github.io/ds-preloader-js/images/image-demo-3.jpg" class="ds-preloader-demo-image">
+  <img src="https://shkredovdmitriy.github.io/ds-preloader-js/images/image-demo-4.jpg" class="ds-preloader-demo-image">
+</body>
+</html>
+```
 
 ### License
 MIT License
