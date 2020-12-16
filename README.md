@@ -14,10 +14,10 @@ https://codepen.io/shkredovdmitriy/pen/bGwqXOa
 
 Add this lines to head
 ```
-<link href="https://unpkg.com/ds-preloader-js@0.1.11/dist/ds-preloader.min.css" rel="stylesheet">
+<link href="https://unpkg.com/ds-preloader-js@0.1.12/dist/ds-preloader.min.css" rel="stylesheet">
 ```
 ```
-<script src="https://unpkg.com/ds-preloader-js@0.1.11/dist/ds-preloader.min.js"></script>
+<script src="https://unpkg.com/ds-preloader-js@0.1.12/dist/ds-preloader.min.js"></script>
 ```
 Add this class to body
 ```
