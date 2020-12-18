@@ -3,18 +3,20 @@ import singleSelector from "./_preloaderShortSelectors";
 import preloaderComponentClose from "./_preloaderComponentClose";
 
 let counterHtmlElement:HTMLElement;
+let counter:number = 0;
+let progressPerImage:number = 0;
 
 async function selectCounterHtmlElement(){
   counterHtmlElement = singleSelector(config.load);
 }
 
 async function updateCounter() {
-  config.counter += config.progressPerImage;
-  if(config.counter > 100) {
-    config.counter = 100;
+  counter += progressPerImage;
+  if(counter > 100) {
+    counter = 100;
   }
-  counterHtmlElement.innerHTML = `${config.counter}%`;
-  if(config.counter >= 100) {
+  counterHtmlElement.innerHTML = `${counter}%`;
+  if(counter >= 100) {
     await preloaderComponentClose();
   }
 }
@@ -29,10 +31,10 @@ function listenLoadEvent(url:string) {
 async function listenLoadAllImages(){
   const imagesOnPage = document.querySelectorAll("img");
   if (imagesOnPage.length > 0) {
-    config.progressPerImage = Math.floor(100 / imagesOnPage.length) + 1;
+    progressPerImage = Math.floor(100 / imagesOnPage.length) + 1;
     imagesOnPage.forEach(img => listenLoadEvent(img.src));
   } else {
-    config.counter = 101;
+    counter = 101;
     updateCounter();
   }
 }
