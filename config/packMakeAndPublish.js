@@ -51,7 +51,6 @@ async function execCommand(command) {
         messerr('Error code: '+error.code);
         messerr('Signal received: '+error.signal);
       } else {
-        message(`Done! File ${fromFile} copied to ${toFile}`);
         message('Child Process STDOUT: '+stdout);
         resolve();
       }
