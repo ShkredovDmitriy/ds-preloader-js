@@ -1,6 +1,5 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-// Typescript loader
 module.exports = function() {
   return {
     optimization: {
@@ -17,7 +16,20 @@ module.exports = function() {
           exclude: [/node_modules/, /config/],
           use: 'ts-loader',
         },
+        {
+          test: /\.m?js$/,
+          exclude: /(node_modules|bower_components)/,
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env']
+            }
+          }
+        }
       ],
+    },
+    resolve: {
+      extensions: [".ts", ".tsx", ".js", ".json"],
     },
   }
 }
