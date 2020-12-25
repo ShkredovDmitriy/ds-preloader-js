@@ -3,7 +3,6 @@
 
 
 ### Demo
-
 <a href="https://shkredovdmitriy.github.io/ds-preloader-js" target="_blank">github.io</a> <a href="https://codepen.io/shkredovdmitriy/pen/bGwqXOa" target="_blank">codepen.io</a> 
 
 
@@ -14,12 +13,10 @@
 
 
 ### How to use in older browsers
-
 For older browsers please use <a href="https://www.npmjs.com/package/promise-polyfill" target="_blank">promise-polyfill</a>
 
 
 ### Use without installation
-
 Add this lines to head
 ```
 <link href="https://unpkg.com/ds-preloader-js/dist/ds-preloader.min.css" rel="stylesheet">
